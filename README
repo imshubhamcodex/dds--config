@@ -1,0 +1,11 @@
+1. Download openssl installer (https://slproweb.com/products/Win32OpenSSL.html)
+2. Add its bin path to environment variable "PATH"
+3. To create private key execute "openssl genpkey -algorithm RSA -out private_key.pem -aes256"
+4. To create ssl cert. execute "openssl req -new -x509 -key private_key.pem -out identity_cert.pem -days 365"
+5. While creating cert. make the note of CN (Common Name) that will be used later in permissions.xml
+5. Download rti connext sdk for using RTI libs (https://www.rti.com/free-trial) # optional
+6. Download license file to RTI from your email and saving it into application run dir.
+7. Then add <domain_participant_qos> in governance.xml
+8. Official doc https://github.com/imshubhamcodex/connextdds-py
+
+
