@@ -6,6 +6,6 @@
 5. Download rti connext sdk for using RTI libs (https://www.rti.com/free-trial) # optional
 6. Download license file to RTI from your email and saving it into application run dir.
 7. Then add <domain_participant_qos> in governance.xml
-8. Official doc https://github.com/imshubhamcodex/connextdds-py
+8. Official doc "https://github.com/rticommunity/connextdds-py?tab=readme-ov-file"
 
 
