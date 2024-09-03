@@ -1,11 +1,32 @@
-1. Download openssl installer (https://slproweb.com/products/Win32OpenSSL.html)
-2. Add its bin path to environment variable "PATH"
-3. To create private key execute "openssl genpkey -algorithm RSA -out private_key.pem -aes256"
-4. To create ssl cert. execute "openssl req -new -x509 -key private_key.pem -out identity_cert.pem -days 365"
-5. While creating cert. make the note of CN (Common Name) that will be used later in permissions.xml
-5. Download rti connext sdk for using RTI libs (https://www.rti.com/free-trial) # optional
-6. Download license file to RTI from your email and saving it into application run dir.
-7. Then add <domain_participant_qos> in governance.xml
-8. Official doc "https://github.com/rticommunity/connextdds-py?tab=readme-ov-file"
+# RTI Connext DDS Setup Instructions
 
+## Optional Steps (for RTI Trial Version)
 
+1. **Install OpenSSL:**
+   - Download the OpenSSL installer from [SLProweb](https://slproweb.com/products/Win32OpenSSL.html).
+   - Add the `bin` directory of the OpenSSL installation to the system `PATH` environment variable.
+
+2. **Generate Security Certificates:**
+   - To create a private key, run:
+     ```bash
+     openssl genpkey -algorithm RSA -out private_key.pem -aes256
+     ```
+   - To create an SSL certificate, run:
+     ```bash
+     openssl req -new -x509 -key private_key.pem -out identity_cert.pem -days 365
+     ```
+   - During the certificate creation process, make a note of the `CN` (Common Name), which will be used later in the `permissions.xml` file.
+
+## Additional Steps
+
+3. **Download RTI Connext SDK (Optional):**
+   - Download the RTI Connext SDK from [RTI's Free Trial Page](https://www.rti.com/free-trial) if you need the RTI libraries.
+
+4. **Obtain and Configure the License File:**
+   - Download the license file from your email and save it in the directory where your application will run.
+
+5. **Update Governance Configuration:**
+   - Add the `<domain_participant_qos>` section to your `governance.xml` file.
+
+6. **Refer to Official Documentation:**
+   - For more detailed information, refer to the [RTI Connext DDS Python documentation](https://github.com/rticommunity/connextdds-py?tab=readme-ov-file).

@@ -1,7 +1,7 @@
 <dds>
     <permissions>
         <grant name="ParticipantGrant">
-            <subject_name>CN=Shubham</subject_name>
+            <subject_name>CN=DDS-TEST</subject_name>
             <validity>
                 <not_before>2024-01-01T00:00:00</not_before>
                 <not_after>2025-01-01T00:00:00</not_after>
